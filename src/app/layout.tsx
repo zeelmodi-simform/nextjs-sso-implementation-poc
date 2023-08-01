@@ -1,3 +1,4 @@
+import { UserProvider } from '@auth0/nextjs-auth0/client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -14,9 +15,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
+   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link
+          rel="shortcut icon mask-icon"
+          href="https://cdn.auth0.com/website/auth0_favicon.svg"
+          color="#000000"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+      </head>
+      <UserProvider>
+        <body>{children}</body>
+      </UserProvider>
     </html>
-  )
+  );
 }
