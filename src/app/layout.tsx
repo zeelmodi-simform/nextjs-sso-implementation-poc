@@ -1,7 +1,12 @@
-import { UserProvider } from '@auth0/nextjs-auth0/client'
+
+
+import { UserProvider,  } from '@auth0/nextjs-auth0/client'
 import './globals.css'
+import  '../styles/styles.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
+import AuthWrapper from '@/components/AuthWrapper/AuthWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +20,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-   return (
+
+  
+  return (
     <html lang="en">
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -36,8 +43,14 @@ export default function RootLayout({
         />
       </head>
       <UserProvider>
-        <body>{children}</body>
+        <body>
+          <AuthWrapper>
+            { children }
+          </AuthWrapper>
+        </body>
       </UserProvider>
     </html>
+     
+   
   );
 }
