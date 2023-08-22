@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
+  images: {
     remotePatterns: [
       {
         protocol: "https",
@@ -8,10 +8,10 @@ const nextConfig = {
       },
     ],
   },
-  reactStrictMode: true,  
+  reactStrictMode: true,
   experimental: {
     serverActions: true,
   },
-}
+};
 
 module.exports = nextConfig

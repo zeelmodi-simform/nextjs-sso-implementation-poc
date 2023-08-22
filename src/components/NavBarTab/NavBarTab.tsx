@@ -1,10 +1,11 @@
+import React from 'react'
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react'
 
 type Props = {path: string, label: string }
 
-const NavBarTab = ({path, label }: Props) => {
+const NavBarTab = ({ path, label }: Props) => {
   const pathname = usePathname();
   const isRouteActive = (path: string) => pathname === path;
 
@@ -15,10 +16,10 @@ const NavBarTab = ({path, label }: Props) => {
   }
 
   return (
-    <Link href={path} className={navBarTabClassName}>
-      {label}
+    <Link href={ path } className={ navBarTabClassName }>
+      { label }
     </Link>
   );
-}
+};
 
 export default NavBarTab

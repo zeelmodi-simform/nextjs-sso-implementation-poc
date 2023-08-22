@@ -1,24 +1,18 @@
 import React from 'react'
-import styles from './Navbar.module.css'
+
+import { useUser } from '@auth0/nextjs-auth0/client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+
 import NavBarTab from '../NavBarTab/NavBarTab'
-import { useUser } from '@auth0/nextjs-auth0/client'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
-    const { user } = useUser();
+  const { user } = useUser();
 
   return (
-    // <nav className={styles.nav}>
-    //   <a href="/">Navbar</a>
-    //   <div>
-    //     <button>
-    //       <a href="/login">Login</a>
-    //     </button>
-    //   </div>
-    // </nav>
 
     <div className="nav-bar__container">
       <nav className="nav-bar">
@@ -32,7 +26,6 @@ const Navbar = (props: Props) => {
               width={ 122 }
               height={ 36 }
             />
-            {/* <h1 className="nav-bar__logo">auth0 SSO </h1> */}
           </Link>
         </div>
         <div className="nav-bar__tabs">
@@ -40,7 +33,7 @@ const Navbar = (props: Props) => {
           <NavBarTab path="/public" label="Public" />
           { user && (
             <>
-              <NavBarTab path="/protected" label="Protected" />              
+              <NavBarTab path="/protected" label="Protected" />
             </>
           ) }
         </div>        <div className="nav-bar__buttons">
@@ -64,7 +57,7 @@ const Navbar = (props: Props) => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

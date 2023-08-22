@@ -1,9 +1,6 @@
-import { handleAuth, handleCallback, handleLogin, handleLogout } from '@auth0/nextjs-auth0';
+import { handleAuth,  handleLogin } from '@auth0/nextjs-auth0';
 
 export const GET = handleAuth({
-  // onError: (req: Request, error: Error) => {
-  //     console.log(error);
-  // },    
   login: handleLogin({
     authorizationParams: {
       prompt: 'login'
