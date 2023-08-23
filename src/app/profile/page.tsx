@@ -1,8 +1,9 @@
 'use client'
 
+import React from 'react'
+
 import { useUser } from '@auth0/nextjs-auth0/client'
 import Image from 'next/image'
-import React from 'react'
 
 type Props = {}
 
@@ -47,7 +48,7 @@ const Profile = (props: Props) => {
                             <span className="profile__description">{ user.email }</span>
                         </div>
                     </div>
-                    <div className="profile__details">                        
+                    <div className="profile__details">
                         <div className="code-snippet">
                             <span className="code-snippet__title">Decoded ID User  </span>
                             <div className="code-snippet__container">

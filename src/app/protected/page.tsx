@@ -1,4 +1,3 @@
-import AuthWrapper from '@/components/AuthWrapper/AuthWrapper'
 import React from 'react'
 
 type Props = {}
@@ -6,7 +5,6 @@ type Props = {}
 const Protected = (props: Props) => {
   return (
     <>
-      <AuthWrapper >
         <div className="content-layout">
         <h1 id="page-title" className="content__title">
           Protected Page
@@ -21,8 +19,7 @@ const Protected = (props: Props) => {
             </span>
           </p>
         </div>
-      </div>
-      </AuthWrapper>
+      </div>      
     </>
   )
 };

@@ -1,7 +1,9 @@
 'use client'
 
-import { useUser } from '@auth0/nextjs-auth0/client'
 import React from 'react'
+
+import { useUser } from '@auth0/nextjs-auth0/client'
+
 import PageLoader from '../PageLoader/PageLoader'
 import Navbar from '../Navbar/Navbar'
 
