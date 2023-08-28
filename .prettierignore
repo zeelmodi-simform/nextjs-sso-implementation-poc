@@ -1,0 +1,6 @@
+.next/
+.eslintrc.json
+node_modules
+next.config.ts
+**/*.stories.js
+**/*.stories.jsx

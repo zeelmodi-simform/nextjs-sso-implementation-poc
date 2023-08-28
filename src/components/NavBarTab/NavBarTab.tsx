@@ -1,25 +1,22 @@
-import React from 'react'
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-type Props = {path: string, label: string }
+type Props = { path: string; label: string };
 
 const NavBarTab = ({ path, label }: Props) => {
   const pathname = usePathname();
   const isRouteActive = (path: string) => pathname === path;
 
-  let navBarTabClassName = "nav-bar__tab";
-
-  if (isRouteActive(path)) {
-    navBarTabClassName += " nav-bar__tab--active";
-  }
-
   return (
-    <Link href={ path } className={ navBarTabClassName }>
-      { label }
+    <Link
+      href={path}
+      className={`nav-bar__tab ${
+        isRouteActive(path) ? 'nav-bar__tab--active' : ''
+      }`}
+    >
+      {label}
     </Link>
   );
 };
 
-export default NavBarTab
+export default NavBarTab;

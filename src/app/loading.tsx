@@ -1,15 +1,11 @@
-import React from 'react'
+import PageLoader from '@/components/PageLoader/PageLoader';
 
-import PageLoader from '@/components/PageLoader/PageLoader'
-
-type Props = {}
-
-const Loading = (props: Props) => {
-    return (
-        <div className="page-layout">
-            <PageLoader />
-        </div>
-    );
+const Loading = () => {
+  return (
+    <div className="page-layout">
+      <PageLoader />
+    </div>
+  );
 };
 
-export default Loading
+export default Loading;
