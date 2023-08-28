@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
-
-const Protected = (props: Props) => {
+const Protected = () => {
   return (
     <>
-        <div className="content-layout">
+      <div className="content-layout">
         <h1 id="page-title" className="content__title">
           Protected Page
         </h1>
@@ -19,9 +17,9 @@ const Protected = (props: Props) => {
             </span>
           </p>
         </div>
-      </div>      
+      </div>
     </>
-  )
+  );
 };
 
-export default Protected
+export default Protected;

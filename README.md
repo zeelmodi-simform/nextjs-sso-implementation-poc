@@ -1,14 +1,10 @@
 # Adding Auth0 Login to Your Next.js Application
 
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
 
 This POC demonstrates **how to implement SSO User Authentication** in Next.js web applications using Auth0.
 
 Visit the ["Next.js/JavaScript Code Sample: User Authentication For Basic Apps"](https://developer.auth0.com/resources/code-samples/web-app/nextjs/basic-authentication) page for instructions on how to configure and run this code sample and how to integrate it with an external API server of your choice.
-
 
 ## Getting Started
 
