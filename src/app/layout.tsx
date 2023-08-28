@@ -19,8 +19,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
-
+}) {  
   
   return (
     <html lang="en">
@@ -42,13 +41,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <UserProvider>
-        <body>
+      <body>
+        <UserProvider
+        // loginUrl='/api/auth/login' profileUrl='/profile'
+        >
           <AuthWrapper>
-            { children }
+            <>
+              { children }
+            </>
           </AuthWrapper>
-        </body>
-      </UserProvider>
+        </UserProvider>
+      </body>
     </html>
      
    

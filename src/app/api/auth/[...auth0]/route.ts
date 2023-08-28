@@ -14,8 +14,14 @@ export const GET = handleAuth({
     },
     returnTo: '/profile'
   }),
+  onError(req: Request, error: Error) {
+    console.error('onError:::',error);
+  },
+   
 });
 
-
+// export const runtime = 'edge';
+//https://github.com/vercel/next.js/issues/51642
+// export const fetchCache = 'force-no-store';
 
 export const dynamic = 'force-dynamic'

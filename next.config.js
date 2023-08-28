@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const dns = require("dns");
+dns.setDefaultResultOrder("ipv4first");
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -10,7 +13,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   experimental: {
-    serverActions: true,
+    serverActions: false,
   },
 };
 

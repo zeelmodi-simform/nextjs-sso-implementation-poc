@@ -37,7 +37,7 @@ const Profile = (props: Props) => {
                 <div className="profile-grid">
                     <div className="profile__header">
                         <Image
-                            src={ user.picture || defaultPicture }
+                            src={ user?.picture ?? defaultPicture }
                             alt="Profile"
                             className="profile__avatar"
                             width={ 80 }
